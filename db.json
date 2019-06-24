@@ -20,12 +20,6 @@
       "attention": false,
       "date": "03-02-2019",
       "tech": "Sara Wilson"
-    },
-    {
-      "name": "John Doe",
-      "email": "johnDoe@gmail.com",
-      "password": "abc123",
-      "id": 4
     }
   ],
   "techs": [
