@@ -1,11 +1,15 @@
 import React, { Fragment, useEffect } from 'react';
-import 'materialize-css/dist/css/materialize.min.css';
 import './App.css';
+
+//Redux imports
 import {Provider} from 'react-redux'
 import store from './store'
-//import js from materialize npm
+
+// Materialize imports
+import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
-//Components
+
+//Component imports
 import SearchBar from './components/layout/SearchBar';
 import Logs from './components/logs/Logs';
 import AddBtn from './components/layout/AddBtn';
