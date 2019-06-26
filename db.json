@@ -20,13 +20,6 @@
       "tech": "John Doe",
       "date": "2019-06-25T21:39:41.135Z",
       "id": 3
-    },
-    {
-      "message": "test log 2",
-      "attention": true,
-      "tech": "Sara Wilson",
-      "date": "2019-06-26T03:59:17.356Z",
-      "id": 4
     }
   ],
   "techs": [
@@ -49,11 +42,6 @@
       "firstName": "Greg",
       "lastName": "Harris",
       "id": 4
-    },
-    {
-      "firstName": "Bobby",
-      "lastName": "Brown",
-      "id": 5
     }
   ]
 }

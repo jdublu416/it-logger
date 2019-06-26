@@ -51,7 +51,7 @@ export const addTech = tech => async dispatch => {
 };
 
 //Delete tech from server
-export const deleteTechs = id => async dispatch => {
+export const deleteTech = id => async dispatch => {
   try {
     setLoading();
 
