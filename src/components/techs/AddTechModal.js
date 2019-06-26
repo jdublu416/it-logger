@@ -1,20 +1,26 @@
 import React, { useState } from 'react';
+import {connect} from 'react-redux'
+import {addTech} from '../../actions/techActions'
+import PropTypes from 'prop-types'
 import M from 'materialize-css/dist/js/materialize.min.js';
 
-const AddTechModal = () => {
+const AddTechModal = ({addTech}) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
 
-  const onSubmit = () => {
+  const onSubmit = (tech) => {
     if (firstName === '' || lastName === '') {
       M.toast({ html: 'Submission Failure...Please fill out all fields' });
     } else {
-      //   e.preventDefault();
-      console.log('Submit button is working for tech add', firstName, lastName);
-      //Clear Fields
-      setFirstName('');
-      setLastName('');
+     addTech({
+       firstName,
+       lastName
+     });
+     M.toast({html: `Technician ${firstName} ${lastName} has been added`})
     }
+    //Clear fields
+    setFirstName('');
+    setLastName('');
   };
 
   return (
@@ -65,4 +71,8 @@ const AddTechModal = () => {
   );
 };
 
-export default AddTechModal;
+AddTechModal.propTypes = {
+  addTech: PropTypes.func.isRequired
+}
+
+export default connect(null, {addTech})(AddTechModal);
